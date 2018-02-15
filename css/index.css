@@ -1,39 +1,69 @@
-body{
-
+body {
+  background: #efefef;
   margin: 0;
   padding: 0;
 }
-a{
+
+a {
   text-decoration: none;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid #dedede;
+}
+ul,ol{
+  list-style:none ;
+
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
 /*<editor-fold desc="topNavBar">*/
 .clearfix::after {
   content: "";
   display: block;
-  clear:both;
+  clear: both;
 }
-.topNavBar{
-  padding: 20px 16px;
-}
-.topNavBar>nav{
-  padding:5px ;
+
+.topNavBar {
+  padding: 20px 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 
 }
-.topNavBar>nav>ul{
+
+.topNavBar-inner {
+  padding: 0 16px;
+}
+
+.topNavBar nav {
+  padding: 5px;
+
+}
+
+.topNavBar nav > ul {
   list-style: none;
   margin: 0;
   padding: 0;
 
 }
 
-.topNavBar>nav li{
+.topNavBar nav li {
   float: left;
-  margin:0 17px;
-
+  margin: 0 17px;
 
 }
-.topNavBar>nav a{
+
+.topNavBar nav a {
   display: block;
   font-size: 12px;
   color: #b7b7b7;
@@ -43,29 +73,328 @@ a{
   padding: 4px 0;
 }
 
-.topNavBar>nav a:hover{
+.topNavBar nav a:hover {
   border-bottom: 3px solid #e06567;
 }
-.topNavBar>a{
+
+.topNavBar a {
   float: left;
 
-
 }
-.topNavBar>nav{
+
+.topNavBar nav {
   float: right;
 }
-/*</editor-fold>*/
 
-.topNavBar .logo{
+.topNavBar .logo {
   padding: 3px 0;
   font-size: 24px;
   font-family: "Arial Black";
 }
 
-.topNavBar .logo .rs{
+.topNavBar .logo .rs {
   margin-right: 4px;
   color: #e6686a;
 }
-.topNavBar .logo .card{
+
+.topNavBar .logo .card {
   color: #9a9da2;
+}
+
+/*</editor-fold>*/
+
+.banner {
+  height: 515px;
+  background: url("../image/oneperson.png") center center;
+  background-size: cover;
+}
+
+.banner .mask {
+  height: 515px;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.userCard {
+  /*border: 1px solid red;*/
+  max-width: 940px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.47)
+
+}
+
+.userCard .welcome {
+  position: relative;
+  background: #e6686a;
+  color: white;
+  display: inline-block;
+  padding: 4px 16px;
+  line-height: 22px;
+
+}
+
+.userCard .welcome .triangle {
+  position: absolute;
+  display: block;
+  border: 10px solid #e6686a;
+  height: 0px;
+  width: 0px;
+  border-top: 0px;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+
+  top: 100%;
+  left: 4px;
+
+}
+
+.userCard .picture {
+  float: left;
+
+}
+
+.userCard .profile {
+  float: left;
+  margin-left: 60px;
+  width: 380px;
+}
+
+.userCard .pictureAndText {
+
+  padding: 60px;
+
+}
+
+.userCard .profile h1 {
+  margin-top: 30px;
+}
+
+.userCard .profile h2 {
+  font-size: 20px;
+  color: rgb(61, 68, 81);
+}
+
+.userCard .profile hr {
+  margin: 20px 0;
+}
+
+.userCard .profile dl dt {
+  float: left;
+  width: 30%;
+  padding: 5px 0;
+  font-weight: bold;
+}
+
+.userCard .profile dl dd {
+  float: left;
+  width: 70%;
+  padding: 5px 0;
+  color: #9da0a7;
+}
+
+.userCard footer {
+  background-color: #e6686a;
+  text-align: center;
+}
+
+/*   logo  */
+.userCard svg{
+  width: 30px;
+  height: 30px;
+
+  fill:white;
+
+  /*上面明显偏上 解决* /
+   */
+  vertical-align: top;
+}
+
+.userCard footer>a{
+  /*border: 1px solid black;*/
+  /* inline 不能包住 svg */
+  display: inline-block;
+  line-height: 30px;
+  padding: 5px 0;
+  width: 40px;
+  border-radius: 50%;
+  margin: 16px;
+}
+
+
+.userCard footer>a:hover{
+  /*border: 1px solid black;*/
+  /* inline 不能包住 svg */
+  background-color: #CF5D5F;
+  display: inline-block;
+  line-height: 30px;
+  padding: 5px 0;
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* 介绍页位置*/
+body>main{
+  margin-top: -360px;
+}
+
+
+body>main .dowmloadResume{
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 21px 55px;
+  border: 1px solid #cdcfd1;
+  background-color: #efefef;
+  border-radius: 2px;
+  color: #3d4451;
+  font-weight: bold;
+  margin: 32px 0;
+  transition: box-shadow 0.3s;
+
+}
+
+body>main .dowmloadResume-wrapper{
+  text-align: center;
+  
+}
+
+body>main .dowmloadResume:hover{
+
+  box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.27);
+}
+
+.selfIntroduction{
+  max-width: 940px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Ssection*/
+
+section.skills,
+section.portfolio{
+  max-width:940px ;
+  margin : 0 auto;
+  margin-top: 60px;
+}
+
+section.skills >h2,
+section.portfolio >h2{
+  text-align: center;
+  color:#3d4451;
+  line-height: 1.2;
+  font-weight: 600;
+}
+section.skills>ol{
+  background-color: #fff;
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.47);
+  padding: 42px 50px 10px;
+  margin-top: 30px;
+}
+
+/* 进度条*/
+section.skills .progressBar{
+  height: 5px;
+  /*border: 1px solid #e6686a;*/
+  background-color:#fae1e1;
+  border-radius:2px ;
+  margin: 4px 0 40px 0;
+}
+
+section.skills .progressBar>.progress{
+  height: 100%;
+  background-color: #e6686a;
+  width: 50%;
+
+}
+
+section.skills >ol>li{
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 40px;
+}
+section.skills >ol>li:nth-child(even){
+  float: right;
+  /*background-color: #f00;*/
+}
+section.skills h3{
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+/* portfolio*/
+section.portfolio{
+  text-align: center;
+}
+section.portfolio>nav>ol>li{
+  float: left;
+  margin-left: 40px;
+  cursor: pointer;
+}
+section.portfolio>nav>ol{
+  /*border: 1px solid red;*/
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+section.portfolio>nav{
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 32px;
+}
+section.portfolio>nav>ol>li:first-child{
+  float: left;
+  margin-left: 0px;
+}
+
+section.portfolio>nav .bar{
+  /*border: 1px solid red;*/
+  height: 5px;
+  background-color: white;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  border-radius: 2px;
+}
+
+section.portfolio>nav .bar>.bar-inner{
+  height: 100%;
+  background-color: #e6686a;
+  /*width: 10%;*/
+  border-radius: 2px;
+  /*margin-left: 100px;*/
+  transition: all 0.3s;
+}
+/*状态机*/
+section.portfolio>nav .bar.stage-1 .bar-inner {
+   width: 50px;
+   margin-left: 0px;
+ }
+
+section.portfolio>nav .bar.stage-2 .bar-inner {
+  width: 65px;
+  margin-left: 65px;
+}
+
+section.portfolio>nav .bar.stage-3 .bar-inner {
+  width: 96px;
+  margin-left: 140px;
+}
+
+
+/*works*/
+section.portfolio .works{
+  position: relative;
+  /*border: 1px solid red;*/
+  margin-bottom: 100px;
+
+}
+
+section.portfolio .works> .big,
+section.portfolio .works> .small
+{
+  position: absolute;
+
 }
