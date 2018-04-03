@@ -5,7 +5,7 @@
   <title>庄海鑫的网页</title>
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/loading.css">
-
+  <link rel="stylesheet" href="css/sticky.css">
   <script src="//at.alicdn.com/t/font_570364_i3lxcq9qo0kvs4i.js"></script>
   <style type="text/css">
     .icon {
@@ -35,16 +35,32 @@
 </head>
 <body>
 <div id="siteWelcome" class="site-welcome active"><div class="loading"></div></div>
-<div class="topNavBar ">
+<div class="topNavBar " id="topNavBar">
   <div class="topNavBar-inner clearfix">
     <a class="logo" href="#" alt="log">
       <span class="rs">RS</span><span class="card">card</span></a>
-    <nav>
+    <nav class="menu">
       <ul class="clearfix">
         <li><a href="">关于</a></li>
         <li><a href="">技能</a></li>
-        <li><a href="">作品</a></li>
-        <li><a href="">博客</a></li>
+        <li class="menuTrigger">
+          <a href="#" >作品</a>
+          <ul class="subMenu" >
+            <li><a>作品1</a></li>
+            <li><a>作品2</a></li>
+            <li><a>作品3</a></li>
+
+          </ul>
+        </li>
+        <li class="menuTrigger">
+          <a href="#">博客</a>
+          <ul class="subMenu">
+            <li><a>博客1</a></li>
+            <li><a>博客2</a></li>
+            <li><a>博客3</a></li>
+          </ul>
+
+        </li>
         <li><a href="">日历</a></li>
         <li><a href="">联系方式</a></li>
         <li><a href="">其他</a></li>
@@ -201,7 +217,43 @@
 <script>
   setTimeout(function () {
     siteWelcome.classList.remove('active');
-  },3000)
+  },1000);
+
+  window.onscroll=function () {
+    window.scrollY>0?topNavBar.classList.add('sticky'):topNavBar.classList.remove('sticky');
+  }
+
+  let liTages=document.querySelectorAll('nav.menu>ul>li');
+  for(let i=0;i<liTages.length;i++){
+    liTages[i].onmouseenter=function (e) {
+      let li=e.currentTarget;
+      // let brother=li.getElementsByTagName('ul')[0];
+      // let brother=a.nextSibling;
+      // while(brother.tagName!=='UL'){
+      //   brother=brother.nextSibling;
+      // }
+     //鼠标一进去就添加active类
+      li.classList.remove('vanish');
+      li.classList.add('active');
+    }
+    liTages[i].onmouseleave=function (e) {
+      let li=e.currentTarget;
+      // let brother=li.getElementsByTagName('ul')[0];
+      // let brother=a.nextSibling;
+      // while(brother.tagName!=='UL'){
+      //   brother=brother.nextSibling;
+      // }
+      //鼠标一进去就删除active类
+      // brother.classList.remove('active');
+      li.classList.add('vanish');
+      li.classList.remove('active');
+
+
+
+
+    }
+
+  }
 
 </script>
 </body>
