@@ -1,81 +1,18 @@
-body {
-  background: #efefef;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-hr {
-  height: 0;
-  border: none;
-  border-top: 1px solid #dedede;
-}
-ul,ol{
-  list-style:none ;
-
-}
-h1,h2,h3,h4,h5,h6{
-  font-weight: normal;
-}
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.topNavBar {
-  padding: 20px 0px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  transition: all 1s;
-  color: #b7b7b7;
-
-}
-
-.topNavBar-inner {
-  padding: 0 16px;
-}
-
-.topNavBar nav {
-  padding: 5px;
-
-}
-
-.topNavBar nav > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-}
-
-.topNavBar nav li {
-  float: left;
-  margin: 0 17px;
-  position: relative;
-
-}
-
-.topNavBar nav a {
-  display: block;
-  font-size: 12px;
-  color: inherit;
-  font-weight: bold;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  padding: 4px 0;
-  position: relative;
-
-}
+/*css reset*/
+body {background: #efefef;margin: 0;padding: 0;}
+a {text-decoration: none;}
+* {margin: 0;padding: 0;}
+hr {height: 0;border: none;border-top: 1px solid #dedede;}
+ul,ol{list-style:none ;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+.clearfix::after {content: "";display: block;clear: both;}
+/*topNavBar*/
+.topNavBar {padding: 20px 0px;position: fixed;top: 0;left: 0;width: 100%;transition: all 1s;color: #b7b7b7;}
+.topNavBar-inner {padding: 0 16px;}
+.topNavBar nav {padding: 5px;}
+.topNavBar nav > ul {list-style: none;margin: 0;padding: 0;}
+.topNavBar nav li {float: left;margin: 0 17px;position: relative;}
+.topNavBar nav a {display: block;font-size: 12px;color: inherit;font-weight: bold;border-top: 3px solid transparent;border-bottom: 3px solid transparent;padding: 4px 0;position: relative;}
 .topNavBar nav>ul>li>a::after {
   /*border-bottom: 3px solid #e06567;*/
   content:" ";
@@ -129,38 +66,29 @@ h1,h2,h3,h4,h5,h6{
     width:0px;
   }
 }
-
-.topNavBar .subMenu{
+.topNavBar .subMenu {
   position: absolute;
   display: none;
   /*display: block;*/
   /*visibility: hidden;*/
-  top:100%;
-  right:0;
+  top: 100%;
+  right: 0;
   background-color: #fff;
   white-space: nowrap;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-
 }
-
-
 .topNavBar li.active .subMenu{
   display: block;
   /*visibility: visible;*/
-
   animation:slideMenu .5s;
-
 }
-
 .topNavBar li.vanish .subMenu{
   display: none;
   /*visibility: hidden;*/
  /*opacity: 0;*/
   animation:slideMenus .5s;
-
 }
-
 @keyframes slideMenu{
   0%{
     transform:translateX(-50%);
@@ -171,7 +99,6 @@ h1,h2,h3,h4,h5,h6{
     opacity:1;
   }
 }
-
 @keyframes slideMenus{
   0%{
     display: block;
@@ -185,81 +112,44 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 
-
-
-
-
-
-
-
 .topNavBar .subMenu li{
-
   margin: 0;
   padding: 0 10px;
   transition:background .5s;
 }
 .topNavBar .subMenu li:hover{
   /* font-family: Helvetica; */
-
   background: #efefef;
   color:#e6686a;
 }
-
 .topNavBar .subMenu a{
   font-family: Helvetica;
   font-weight: lighter;
 }
 
-
-
-
-.topNavBar a {
-  float: left;
-
+.topNavBar a {float: left;
 }
-
-.topNavBar nav {
-  float: right;
-}
-
-
-
-.topNavBar .logo {
-  padding: 3px 0;
-  font-size: 24px;
-  font-family: "Arial Black";
-}
-
-.topNavBar .logo .rs {
-  margin-right: 4px;
-  color: #e6686a;
-}
-
-.topNavBar .logo .card {
-  color: #9a9da2;
-}
+.topNavBar nav {float: right;}
+.topNavBar .logo {padding: 3px 0;font-size: 24px;font-family: "Arial Black";}
+.topNavBar .logo .rs {margin-right: 4px;color: #e6686a;}
+.topNavBar .logo .card {color: #9a9da2;}
 /*</editor-fold>*/
-
 .banner {
   height: 515px;
   background: url("../image/oneperson.png") center center;
   background-size: cover;
 }
-
 .banner .mask {
   height: 515px;
   background-color: rgba(0, 0, 0, .7);
 }
-
 .userCard {
   /*border: 1px solid red;*/
   max-width: 940px;
   margin: 0 auto;
   background: #fff;
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.47)
-
 }
-
 .userCard .welcome {
   position: relative;
   background: #e6686a;
@@ -267,9 +157,7 @@ h1,h2,h3,h4,h5,h6{
   display: inline-block;
   padding: 4px 16px;
   line-height: 22px;
-
 }
-
 .userCard .welcome .triangle {
   position: absolute;
   display: block;
@@ -279,73 +167,57 @@ h1,h2,h3,h4,h5,h6{
   border-top: 0px;
   border-bottom-color: transparent;
   border-right-color: transparent;
-
   top: 100%;
   left: 4px;
-
 }
 
 .userCard .picture {
   float: left;
 
 }
-
 .userCard .profile {
   float: left;
   margin-left: 60px;
   width: 380px;
 }
-
 .userCard .pictureAndText {
-
   padding: 60px;
-
 }
-
 .userCard .profile h1 {
   margin-top: 30px;
 }
-
 .userCard .profile h2 {
   font-size: 20px;
   color: rgb(61, 68, 81);
 }
-
 .userCard .profile hr {
   margin: 20px 0;
 }
-
 .userCard .profile dl dt {
   float: left;
   width: 30%;
   padding: 5px 0;
   font-weight: bold;
 }
-
 .userCard .profile dl dd {
   float: left;
   width: 70%;
   padding: 5px 0;
   color: #9da0a7;
 }
-
 .userCard footer {
   background-color: #e6686a;
   text-align: center;
 }
-
 /*   logo  */
 .userCard svg{
   width: 30px;
   height: 30px;
-
   fill:white;
-
   /*上面明显偏上 解决* /
    */
   vertical-align: top;
 }
-
 .userCard footer>a{
   /*border: 1px solid black;*/
   /* inline 不能包住 svg */
@@ -356,8 +228,6 @@ h1,h2,h3,h4,h5,h6{
   border-radius: 50%;
   margin: 16px;
 }
-
-
 .userCard footer>a:hover{
   /*border: 1px solid black;*/
   /* inline 不能包住 svg */
@@ -373,8 +243,6 @@ h1,h2,h3,h4,h5,h6{
 body>main{
   margin-top: -360px;
 }
-
-
 body>main .dowmloadResume{
   display: inline-block;
   font-size: 14px;
@@ -392,7 +260,7 @@ body>main .dowmloadResume{
 
 body>main .dowmloadResume-wrapper{
   text-align: center;
-  
+
 }
 
 body>main .dowmloadResume:hover{
