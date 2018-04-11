@@ -38,7 +38,7 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
   /*animation: slideNavBar .25s;*/
 /*}*/
 /*有下拉菜单的移动导航*/
-.topNavBar nav>ul>li.active>a::after {
+.topNavBar nav>ul>li.active>a::after,.topNavBar nav>ul>li.highlight>a::after{
   /*border-bottom: 3px solid #e06567;*/
   content:" ";
   display: block;
@@ -304,14 +304,20 @@ section.skills .progressBar{
   background-color:#fae1e1;
   border-radius:2px ;
   margin: 4px 0 40px 0;
+  overflow: hidden;
 }
 
 section.skills .progressBar>.progress{
   height: 100%;
   background-color: #e6686a;
   width: 50%;
-
+  transform: translateX(0);
+  transition: all 1s;
 }
+
+
+
+
 
 section.skills >ol>li{
   float: left;
@@ -402,4 +408,8 @@ section.portfolio .works> .small
 {
   position: absolute;
 
+}
+
+.xxxx{
+  border: 10px solid red;
 }
