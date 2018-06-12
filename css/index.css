@@ -396,20 +396,64 @@ section.portfolio>nav .bar.stage-3 .bar-inner {
 
 
 /*works*/
-section.portfolio .works{
-  position: relative;
-  /*border: 1px solid red;*/
-  margin-bottom: 100px;
+/*section.portfolio .works{*/
+  /*position: relative;*/
+  /*!*border: 1px solid red;*!*/
+  /*margin-bottom: 100px;*/
 
-}
+/*}*/
 
-section.portfolio .works> .big,
-section.portfolio .works> .small
-{
-  position: absolute;
+/*section.portfolio .works> .big,*/
+/*section.portfolio .works> .small*/
+/*{*/
+  /*position: absolute;*/
 
-}
+/*}*/
 
 .xxxx{
   border: 10px solid red;
 }
+
+/*  轮播  */
+
+section.portfolio .swiper-container {
+  width: 668px;
+  height: 501px;
+  background-color: #fff;
+  margin-top: 30px;
+}
+section.portfolio .work_1{
+  background: url("../image/works/nav-page.jpg") center center no-repeat;
+  /*background-color: #fff;*/
+  background-size: cover;
+}
+section.portfolio .work_2{
+  background: url("../image/works/canvas.jpg") center center no-repeat;
+  background-size: cover;
+}
+section.portfolio .work_3{
+  background: url("../image/works/apple-style-slides.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+/* 导航按钮 */
+section.portfolio .swiper-button-prev,section.portfolio .swiper-button-next{
+  background-color: #fff;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+}
+section.portfolio .swiper-button-prev:focus,section.portfolio .swiper-button-next:focus{
+  outline: none;
+  /*box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);*/
+
+}
+/* 按钮旋转  */
+/*section.portfolio .swiper-button-prev:active {*/
+  /*transform: rotate(-360deg);*/
+  /*transition: all 1s;*/
+/*}*/
+/*section.portfolio .swiper-button-next:active {*/
+  /*transform: rotate(360deg);*/
+  /*transition: all .5s;*/
+/*}*/

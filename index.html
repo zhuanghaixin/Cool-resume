@@ -1,387 +1,461 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>庄海鑫前端工程师简历</title>
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/loading.css">
-  <link rel="stylesheet" href="css/sticky.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <script src="//at.alicdn.com/t/font_570364_i3lxcq9qo0kvs4i.js"></script>
-  <style type="text/css">
-    .icon {width: 1em;height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
-    .site-welcome{display: none;position: fixed;top:0;left:0;width: 100%;height: 100%;background-color: #efefef;z-index: 1;justify-content: center;align-items: center;}
-    .site-welcome.active{display: flex;}
-  </style>
+    <meta charset="UTF-8">
+    <title>庄海鑫前端工程师简历</title>
+    <link rel="stylesheet" href="node_modules/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/sticky.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="//at.alicdn.com/t/font_570364_i3lxcq9qo0kvs4i.js"></script>
+
+    <style type="text/css">
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+
+        .site-welcome {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #efefef;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .site-welcome.active {
+            display: flex;
+        }
+    </style>
 </head>
 <body>
-<div id="siteWelcome" class="site-welcome active"><div class="loading"></div></div>
+<div id="siteWelcome" class="site-welcome active">
+    <div class="loading"></div>
+</div>
 <div class="topNavBar " id="topNavBar">
-  <div class="topNavBar-inner clearfix">
-    <a class="logo" href="#" alt="log">
-      <span class="rs">RS</span><span class="card">card</span></a>
-    <nav class="menu">
-      <ul class="clearfix">
-        <li><a href="#siteAbout">关于</a></li>
-        <li><a href="#siteSkills">技能</a></li>
-        <li class="menuTrigger">
-          <a href="#siteWorks" >作品</a>
-          <ul class="subMenu" >
-            <li><a>作品1</a></li>
-            <li><a>作品2</a></li>
-            <li><a>作品3</a></li>
+    <div class="topNavBar-inner clearfix">
+        <a class="logo" href="#" alt="log">
+            <span class="rs">RS</span><span class="card">card</span></a>
+        <nav class="menu">
+            <ul class="clearfix">
+                <li><a href="#siteAbout">关于</a></li>
+                <li><a href="#siteSkills">技能</a></li>
+                <li class="menuTrigger">
+                    <a href="#siteWorks">作品</a>
+                    <ul class="subMenu">
+                        <li><a>作品1</a></li>
+                        <li><a>作品2</a></li>
+                        <li><a>作品3</a></li>
 
-          </ul>
-        </li>
-        <li class="menuTrigger">
-          <a href="#siteBlogs">博客</a>
-          <ul class="subMenu">
-            <li><a>博客1</a></li>
-            <li><a>博客2</a></li>
-            <li><a>博客3</a></li>
-          </ul>
+                    </ul>
+                </li>
+                <li class="menuTrigger">
+                    <a href="#siteBlogs">博客</a>
+                    <ul class="subMenu">
+                        <li><a>博客1</a></li>
+                        <li><a>博客2</a></li>
+                        <li><a>博客3</a></li>
+                    </ul>
 
-        </li>
-        <li><a href="#siteCalender">日历</a></li>
-        <li><a href="#siteContact">联系方式</a></li>
-        <li><a href="#siteOther">其他</a></li>
+                </li>
+                <li><a href="#siteCalender">日历</a></li>
+                <li><a href="#siteContact">联系方式</a></li>
+                <li><a href="#siteOther">其他</a></li>
 
-      </ul>
-    </nav>
-  </div>
+            </ul>
+        </nav>
+    </div>
 </div>
 <div class="banner">
-  <div class="mask">
+    <div class="mask">
 
-  </div>
+    </div>
 </div>
 <main>
-  <div data-x class="userCard " id="siteAbout">
-    <div class="pictureAndText clearfix">
-      <div class="picture">
-        <img src="image/avatar.PNG " alt="头像" width="380px">
-      </div>
-      <div class="profile">
+    <div data-x class="userCard " id="siteAbout">
+        <div class="pictureAndText clearfix">
+            <div class="picture">
+                <img src="image/avatar.PNG " alt="头像" width="380px">
+            </div>
+            <div class="profile">
           <span class="welcome">Hello
             <span class="triangle"></span>
           </span>
 
-        <h1>庄海鑫</h1>
-        <h2>前端开发工程师</h2>
-        <hr>
-        <dl>
-          <dt>年龄</dt>
-          <dd>21</dd>
-          <dt>所在城市</dt>
-          <dd>沈阳</dd>
-          <dt>邮箱</dt>
-          <dd>649308293@qq.com</dd>
-          <dt>手机</dt>
-          <dd>13604903685</dd>
-          <dt>GitHub</dt>
-          <dd>https://github.com/zhuanghaixin</dd>
-        </dl>
-      </div>
-    </div>
-    <footer class="meida">
-      <a href="">
-        <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-github"></use>
-        </svg>
-      </a>
-      <a href="">
-        <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-weibo"></use>
-        </svg>
-      </a>
-      <a href="">
-        <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-weixin-copy"></use>
-        </svg>
-      </a>
-      <a href="">
-        <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-zhihu"></use>
-        </svg>
-      </a>
-    </footer>
+                <h1>庄海鑫</h1>
+                <h2>前端开发工程师</h2>
+                <hr>
+                <dl>
+                    <dt>年龄</dt>
+                    <dd>21</dd>
+                    <dt>所在城市</dt>
+                    <dd>沈阳</dd>
+                    <dt>邮箱</dt>
+                    <dd>649308293@qq.com</dd>
+                    <dt>手机</dt>
+                    <dd>13604903685</dd>
+                    <dt>GitHub</dt>
+                    <dd>https://github.com/zhuanghaixin</dd>
+                </dl>
+            </div>
+        </div>
+        <footer class="meida">
+            <a href="">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            </a>
+            <a href="">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-weibo"></use>
+                </svg>
+            </a>
+            <a href="">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-weixin-copy"></use>
+                </svg>
+            </a>
+            <a href="">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            </a>
+        </footer>
 
-  </div>
-  <p class="dowmloadResume-wrapper">
-    <a class="dowmloadResume" href="./resume.pdf" target="_blank" download="">下载pdf</a>
-  </p>
-  <p class="selfIntroduction">
-    庄海鑫, 在读大三学生，软件工程专业。<br>
-    技能:HTML,CSS,JavaScript
-  </p>
+    </div>
+    <p class="dowmloadResume-wrapper">
+        <a class="dowmloadResume" href="./resume.pdf" target="_blank" download="">下载pdf</a>
+    </p>
+    <p class="selfIntroduction">
+        庄海鑫, 在读大三学生，软件工程专业。<br>
+        技能:HTML,CSS,JavaScript
+    </p>
 </main>
 
 <section data-x class="skills " id="siteSkills">
-  <h2>技能</h2>
-  <ol class="clearfix">
-    <li>
-      <h3> HTML5&amp;CSS3</h3>
-      <div class="progressBar">
-        <div class="progress" style="width: 70%"></div>
-      </div>
-    </li>
-    <li>
-      <h3>JavaScript</h3>
-      <div class="progressBar">
-        <div class="progress " style="width: 65%"></div>
-      </div>
-    </li>
-    <li>
-      <h3> Jquery</h3>
-      <div class="progressBar">
-        <div class="progress" style="width: 50%"></div>
-      </div>
-    </li>
-    <li>
-      <h3> Vue.js</h3>
-      <div class="progressBar">
-        <div class="progress" style="width: 40%"></div>
-      </div>
-    </li>
-    <li>
-      <h3> React.js</h3>
-      <div class="progressBar">
-        <div class="progress" style="width: 30%"></div>
-      </div>
-    </li>
-    <li>
-      <h3> Node.js</h3>
-      <div class="progressBar">
-        <div class="progress" style="width: 20%"></div>
-      </div>
-    </li>
-
-  </ol>
-</section>
-<section data-x class="portfolio " id="siteWorks">
-  <h2>作品集</h2>
-  <nav>
+    <h2>技能</h2>
     <ol class="clearfix">
-      <li id="portfolio1">所有</li>
-      <li id="portfolio2">框架</li>
-      <li id="portfolio3">原生JS&amp;CSS</li>
+        <li>
+            <h3> HTML5&amp;CSS3</h3>
+            <div class="progressBar">
+                <div class="progress" style="width: 70%"></div>
+            </div>
+        </li>
+        <li>
+            <h3>JavaScript</h3>
+            <div class="progressBar">
+                <div class="progress " style="width: 65%"></div>
+            </div>
+        </li>
+        <li>
+            <h3> Jquery</h3>
+            <div class="progressBar">
+                <div class="progress" style="width: 50%"></div>
+            </div>
+        </li>
+        <li>
+            <h3> Vue.js</h3>
+            <div class="progressBar">
+                <div class="progress" style="width: 40%"></div>
+            </div>
+        </li>
+        <li>
+            <h3> React.js</h3>
+            <div class="progressBar">
+                <div class="progress" style="width: 30%"></div>
+            </div>
+        </li>
+        <li>
+            <h3> Node.js</h3>
+            <div class="progressBar">
+                <div class="progress" style="width: 20%"></div>
+            </div>
+        </li>
 
     </ol>
-    <div id="portfolioBar" class="bar stage-1">
-      <div  class="bar-inner "></div>
-    </div>
-  </nav>
-  <script>
-  portfolio1.onclick=function () {
-    portfolioBar.className=" bar stage-1"
-  }
-  portfolio2.onclick=function () {
-    portfolioBar.className=" bar stage-2"
-  }
-  portfolio3.onclick=function () {
-    portfolioBar.className=" bar stage-3"
-  }
-  </script>
-  <div class="works" style="height: 597px">
-    <div class="big" style="top:0 ;left:25px">
-      <img src="./image/wallhaven-500971.jpg" alt="" style="width: 590px ;height:590px">
-    </div>
-    <div class="small" style="top:0 ;left:630px">
-      <img src="./image/wallhaven-113384.png" alt="" style="width: 285px ;height:285px">
-    </div>
-    <div class="small" style="top:305px;left:630px">
-      <img src="./image/wallhaven-272887.jpg" alt="" style="width: 285px ;height:285px">
+</section>
+<section data-x class="portfolio " id="siteWorks">
+    <h2>作品集</h2>
+    <!--<nav>-->
+    <!--<ol class="clearfix">-->
+    <!--<li id="portfolio1">所有</li>-->
+    <!--<li id="portfolio2">框架</li>-->
+    <!--<li id="portfolio3">原生JS&amp;CSS</li>-->
 
+    <!--</ol>-->
+    <!--<div id="portfolioBar" class="bar stage-1">-->
+    <!--<div  class="bar-inner "></div>-->
+    <!--</div>-->
+    <!--</nav>-->
+    <script>
+        portfolio1.onclick = function () {
+            portfolioBar.className = " bar stage-1"
+        }
+        portfolio2.onclick = function () {
+            portfolioBar.className = " bar stage-2"
+        }
+        portfolio3.onclick = function () {
+            portfolioBar.className = " bar stage-3"
+        }
+    </script>
+    <script src="node_modules/swiper/dist/js/swiper.min.js"></script>
+    <script>
+        console.log(Swiper);
+    </script>
+
+    <!--  变成轮播 -->
+
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide work_1"></div>
+            <div class="swiper-slide work_2"></div>
+            <div class="swiper-slide work_3"></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
     </div>
-  </div>
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev" id="swiper-button-prev"></div>
+    <div class="swiper-button-next" id=""swiper-button-next"></div>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+
+            loop: true,
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要滚动条
+
+        })
+
+
+    </script>
+    <!--<div class="works" style="height: 597px">-->
+    <!--<div class="big" style="top:0 ;left:25px">-->
+    <!--<img src="./image/wallhaven-500971.jpg" alt="" style="width: 590px ;height:590px">-->
+    <!--</div>-->
+    <!--<div class="small" style="top:0 ;left:630px">-->
+    <!--<img src="./image/wallhaven-113384.png" alt="" style="width: 285px ;height:285px">-->
+    <!--</div>-->
+    <!--<div class="small" style="top:305px;left:630px">-->
+    <!--<img src="./image/wallhaven-272887.jpg" alt="" style="width: 285px ;height:285px">-->
+
+    <!--</div>-->
+    <!--</div>-->
+
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+
+
 <script>
-  //开头动画
-  setTimeout(function () {
-    siteWelcome.classList.remove('active');
-  },1000);
+    //开头动画
+    setTimeout(function () {
+        siteWelcome.classList.remove('active');
+    }, 1000);
 
-  //添加offset类
-  let specitialTags=document.querySelectorAll('[data-x]');
-  for(let i=0;i<specitialTags.length;i++){
-    specitialTags[i].classList.add('offset');
-  }
-  //向上滑动动画   需要延迟
-  setTimeout(function () {
-    findClosest();
-  },1000);
+    //添加offset类
+    let specitialTags = document.querySelectorAll('[data-x]');
+    for (let i = 0; i < specitialTags.length; i++) {
+        specitialTags[i].classList.add('offset');
+    }
+    //向上滑动动画   需要延迟
+    setTimeout(function () {
+        findClosest();
+    }, 1000);
 
-  //粘贴的导航栏  ，自动高亮导航栏
-  window.onscroll=function () {
-    window.scrollY > 0 ? topNavBar.classList.add('sticky') : topNavBar.classList.remove('sticky');
-    findClosest();
-  }
+    //粘贴的导航栏  ，自动高亮导航栏
+    window.onscroll = function () {
+        window.scrollY > 0 ? topNavBar.classList.add('sticky') : topNavBar.classList.remove('sticky');
+        findClosest();
+    }
 
     let liTages = document.querySelectorAll('nav.menu>ul>li');
     for (let i = 0; i < liTages.length; i++) {
-      liTages[i].onmouseenter = function (e) {
-        let li = e.currentTarget;
-        // let brother=li.getElementsByTagName('ul')[0];
-        // let brother=a.nextSibling;
-        // while(brother.tagName!=='UL'){
-        //   brother=brother.nextSibling;
-        // }
-        //鼠标一进去就添加active类
-        li.classList.remove('vanish');
-        li.classList.add('active');
-      }
-      liTages[i].onmouseleave = function (e) {
-        let li = e.currentTarget;
-        // let brother=li.getElementsByTagName('ul')[0];
-        // let brother=a.nextSibling;
-        // while(brother.tagName!=='UL'){
-        //   brother=brother.nextSibling;
-        // }
-        //鼠标一进去就删除active类
-        // brother.classList.remove('active');
-        li.classList.add('vanish');
-        li.classList.remove('active');
+        liTages[i].onmouseenter = function (e) {
+            let li = e.currentTarget;
+            // let brother=li.getElementsByTagName('ul')[0];
+            // let brother=a.nextSibling;
+            // while(brother.tagName!=='UL'){
+            //   brother=brother.nextSibling;
+            // }
+            //鼠标一进去就添加active类
+            li.classList.remove('vanish');
+            li.classList.add('active');
+        }
+        liTages[i].onmouseleave = function (e) {
+            let li = e.currentTarget;
+            // let brother=li.getElementsByTagName('ul')[0];
+            // let brother=a.nextSibling;
+            // while(brother.tagName!=='UL'){
+            //   brother=brother.nextSibling;
+            // }
+            //鼠标一进去就删除active类
+            // brother.classList.remove('active');
+            li.classList.add('vanish');
+            li.classList.remove('active');
 
-      }
+        }
     }
 
 
     if (window.navigator.onLine == true) {
-      //使用TWEEN.js 运行动画
-      console.log(TWEEN);
+        //使用TWEEN.js 运行动画
+        console.log(TWEEN);
 
-      function animate(time) {
+        function animate(time) {
+            requestAnimationFrame(animate);
+            TWEEN.update(time);
+        }
+
         requestAnimationFrame(animate);
-        TWEEN.update(time);
-      }
+        //用TWEEN.js的auto scroll smoothly
+        let aTags = document.querySelectorAll('nav.menu >ul>li>a');
+        // console.log("currentTop   "+window.scrollY);
+        for (let i = 0; i < aTags.length; i++) {
+            aTags[i].onclick = function (x) {
+                // console.log("currentTop点击   "+window.scrollY);
+                x.preventDefault();
+                let a = x.currentTarget;
+                let href = a.getAttribute('href');
+                // console.log(href);
+                let element = document.querySelector(href);
+                // console.log(element);
+                // let tops=element.scrollTop;
+                // console.log("scrollTop"+tops);
+                let top = element.offsetTop;
+                // console.log(top);
+                // window.scrollTo(0,top-80);
+                let currentTop = window.scrollY;
+                let targetTop = top - 80;
+                let i = 0;
+                let distance = targetTop - currentTop;//每次动的距离
+                let t = Math.abs(distance / 100) * 500;
+                if (t > 500) {
+                    t = 500;
+                }
+                var coords = {y: currentTop};
+                var tween = new TWEEN.Tween(coords)
+                    .to({y: targetTop}, t)
+                    .easing(TWEEN.Easing.Quadratic.InOut)
+                    .onUpdate(function () {
+                        console.log(1);
+                        window.scrollTo(0, coords.y);
+                    })
+                    .start(); // Start the tween immediately.
 
-      requestAnimationFrame(animate);
-      //用TWEEN.js的auto scroll smoothly
-      let aTags = document.querySelectorAll('nav.menu >ul>li>a');
-      // console.log("currentTop   "+window.scrollY);
-      for (let i = 0; i < aTags.length; i++) {
-        aTags[i].onclick = function (x) {
-          // console.log("currentTop点击   "+window.scrollY);
-          x.preventDefault();
-          let a = x.currentTarget;
-          let href = a.getAttribute('href');
-          // console.log(href);
-          let element = document.querySelector(href);
-          // console.log(element);
-          // let tops=element.scrollTop;
-          // console.log("scrollTop"+tops);
-          let top = element.offsetTop;
-          // console.log(top);
-          // window.scrollTo(0,top-80);
-          let currentTop = window.scrollY;
-          let targetTop = top - 80;
-          let i = 0;
-          let distance = targetTop - currentTop;//每次动的距离
-          let t = Math.abs(distance / 100) * 500;
-          if (t > 500) {
-            t = 500;
-          }
-          var coords = {y: currentTop};
-          var tween = new TWEEN.Tween(coords)
-            .to({y: targetTop}, t)
-            .easing(TWEEN.Easing.Quadratic.InOut)
-            .onUpdate(function () {
-              console.log(1);
-              window.scrollTo(0, coords.y);
-            })
-            .start(); // Start the tween immediately.
-
-        }
-      }
-    } else {
-      //auto scroll smoothly
-      let aTags = document.querySelectorAll('nav.menu >ul>li>a');
-      console.log("currentTop   " + window.scrollY);
-      for (let i = 0; i < aTags.length; i++) {
-        aTags[i].onclick = function (x) {
-          console.log("currentTop点击   " + window.scrollY);
-          x.preventDefault();
-          let a = x.currentTarget;
-          let href = a.getAttribute('href');
-          // console.log(href);
-          let element = document.querySelector(href);
-          // console.log(element);
-          // let tops=element.scrollTop;
-          // console.log("scrollTop"+tops);
-          let top = element.offsetTop;
-          // console.log(top);
-          // window.scrollTo(0,top-80);
-          let n = 25;//一共动多少次  5
-          let duration = 1000 / n; //每次动多少秒  5000
-          let currentTop = window.scrollY;
-          console.log("window.scrollY   " + currentTop);
-          let targetTop = top - 80;
-          console.log("div.offsetTop-80   " + targetTop);
-          let i = 0;
-          let distance = (targetTop - currentTop) / n;//每次动的距离
-          console.log("每次移动的距离 distance   " + distance);
-          let id = setInterval(() => {
-            //   if(i===n){
-            //     // window.clearInterval(id);  注意，这是不行的，没返回值，要多执行一次
-            //     return;
-            // }
-            i++;
-            console.log("currentTop   " + window.scrollY);
-            window.scrollTo(0, currentTop + distance * i);
-            console.log("currentTop滚动之后  " + window.scrollY + distance * i);
-            if (i === n) {
-              window.clearInterval(id);//  注意，这是不行的，因为要多执行一次
-              // return;
             }
-          }, duration);
-          // console.log("之后currentTop   "+currentTop);
-          // console.log("之后targetTop   "+targetTop);
+        }
+    } else {
+        //auto scroll smoothly
+        let aTags = document.querySelectorAll('nav.menu >ul>li>a');
+        console.log("currentTop   " + window.scrollY);
+        for (let i = 0; i < aTags.length; i++) {
+            aTags[i].onclick = function (x) {
+                console.log("currentTop点击   " + window.scrollY);
+                x.preventDefault();
+                let a = x.currentTarget;
+                let href = a.getAttribute('href');
+                // console.log(href);
+                let element = document.querySelector(href);
+                // console.log(element);
+                // let tops=element.scrollTop;
+                // console.log("scrollTop"+tops);
+                let top = element.offsetTop;
+                // console.log(top);
+                // window.scrollTo(0,top-80);
+                let n = 25;//一共动多少次  5
+                let duration = 1000 / n; //每次动多少秒  5000
+                let currentTop = window.scrollY;
+                console.log("window.scrollY   " + currentTop);
+                let targetTop = top - 80;
+                console.log("div.offsetTop-80   " + targetTop);
+                let i = 0;
+                let distance = (targetTop - currentTop) / n;//每次动的距离
+                console.log("每次移动的距离 distance   " + distance);
+                let id = setInterval(() => {
+                    //   if(i===n){
+                    //     // window.clearInterval(id);  注意，这是不行的，没返回值，要多执行一次
+                    //     return;
+                    // }
+                    i++;
+                    console.log("currentTop   " + window.scrollY);
+                    window.scrollTo(0, currentTop + distance * i);
+                    console.log("currentTop滚动之后  " + window.scrollY + distance * i);
+                    if (i === n) {
+                        window.clearInterval(id);//  注意，这是不行的，因为要多执行一次
+                        // return;
+                    }
+                }, duration);
+                // console.log("之后currentTop   "+currentTop);
+                // console.log("之后targetTop   "+targetTop);
+
+            }
+        }
+    }
+
+
+    function findClosest() {
+        //判断元素是否在屏幕中
+        let specitialTags = document.querySelectorAll('[data-x]');
+        //minIndex 就是离窗口顶部最近的元素
+        let minIndex = 0;
+        // console.log('window.scrollY');
+        // console.log(window.scrollY);
+
+        for (let i = 1; i < specitialTags.length; i++) {
+            if (Math.abs(specitialTags[minIndex].offsetTop - window.scrollY) > Math.abs(specitialTags[i].offsetTop - window.scrollY)) {
+                minIndex = i;
+            }
+            // console.log('minIndex');
+            // console.log(minIndex);
 
         }
-      }
+        // 向上滚动动画
+        specitialTags[minIndex].classList.remove('offset');
+
+        //红色边框判断元素是否出现在屏幕中
+        // for(let i=0;i<specitialTags.length;i++){
+        //   specitialTags[minIndex].classList.remove('findClosestx');
+        // }
+        // specitialTags[minIndex].classList.add('findClosestx');
+        let id = specitialTags[minIndex].id;
+        // console.log(id);
+        let a = document.querySelector('a[href="#' + id + '"]');
+        // console.log(a);
+        let li = a.parentNode;
+        let brothersNode = li.parentNode.children;
+        for (let i = 0; i < brothersNode.length; i++) {
+            brothersNode[i].classList.remove('highlight');
+        }
+        a.parentNode.classList.add('highlight');
+
+        // specitialTags[minIndex].classList.add('animate');
+
+
     }
-
-
-  function findClosest(){
-    //判断元素是否在屏幕中
-    let specitialTags=document.querySelectorAll('[data-x]');
-    //minIndex 就是离窗口顶部最近的元素
-    let minIndex=0;
-    // console.log('window.scrollY');
-    // console.log(window.scrollY);
-
-    for(let i=1;i<specitialTags.length;i++){
-      if(Math.abs(specitialTags[minIndex].offsetTop-window.scrollY) >Math.abs(specitialTags[i].offsetTop-window.scrollY)){
-        minIndex=i;
-      }
-      // console.log('minIndex');
-      // console.log(minIndex);
-
-    }
-    // 向上滚动动画
-    specitialTags[minIndex].classList.remove('offset');
-
-    //红色边框判断元素是否出现在屏幕中
-    // for(let i=0;i<specitialTags.length;i++){
-    //   specitialTags[minIndex].classList.remove('findClosestx');
-    // }
-    // specitialTags[minIndex].classList.add('findClosestx');
-    let id=specitialTags[minIndex].id;
-    // console.log(id);
-    let a=document.querySelector('a[href="#'+id+'"]');
-    // console.log(a);
-    let li=a.parentNode;
-    let brothersNode=li.parentNode.children;
-    for(let i=0;i<brothersNode.length;i++){
-      brothersNode[i].classList.remove('highlight');
-    }
-    a.parentNode.classList.add('highlight');
-
-    // specitialTags[minIndex].classList.add('animate');
-
-
-  }
 </script>
 </body>
 </html>
