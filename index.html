@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="css/sticky.css">
     <link rel="stylesheet" href="css/animate.css">
-    <script src="//at.alicdn.com/t/font_570364_i3lxcq9qo0kvs4i.js"></script>
+
 
     <style type="text/css">
-        .icon {
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
+        /*.icon {*/
+            /*width: 1em;*/
+            /*height: 1em;*/
+            /*vertical-align: -0.15em;*/
+            /*fill: currentColor;*/
+            /*overflow: hidden;*/
+        /*}*/
 
         .site-welcome {
             display: none;
@@ -185,36 +185,8 @@
 </section>
 <section data-x class="portfolio " id="siteWorks">
     <h2>作品集</h2>
-    <!--<nav>-->
-    <!--<ol class="clearfix">-->
-    <!--<li id="portfolio1">所有</li>-->
-    <!--<li id="portfolio2">框架</li>-->
-    <!--<li id="portfolio3">原生JS&amp;CSS</li>-->
-
-    <!--</ol>-->
-    <!--<div id="portfolioBar" class="bar stage-1">-->
-    <!--<div  class="bar-inner "></div>-->
-    <!--</div>-->
-    <!--</nav>-->
-    <script>
-        portfolio1.onclick = function () {
-            portfolioBar.className = " bar stage-1"
-        }
-        portfolio2.onclick = function () {
-            portfolioBar.className = " bar stage-2"
-        }
-        portfolio3.onclick = function () {
-            portfolioBar.className = " bar stage-3"
-        }
-    </script>
     <script src="node_modules/swiper/dist/js/swiper.min.js"></script>
-    <script>
-        console.log(Swiper);
-    </script>
-
     <!--  变成轮播 -->
-
-
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide work_1"></div>
@@ -223,239 +195,22 @@
         </div>
         <!-- 如果需要分页器 -->
         <div class="swiper-pagination"></div>
-
-
         <!-- 如果需要滚动条 -->
         <div class="swiper-scrollbar"></div>
     </div>
     <!-- 如果需要导航按钮 -->
-    <div class="swiper-button-prev" id="swiper-button-prev"></div>
-    <div class="swiper-button-next" id=""swiper-button-next"></div>
-    <script>
-        var mySwiper = new Swiper('.swiper-container', {
-
-            loop: true,
-
-            // 如果需要分页器
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // 如果需要前进后退按钮
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // 如果需要滚动条
-
-        })
-
-
-    </script>
-    <!--<div class="works" style="height: 597px">-->
-    <!--<div class="big" style="top:0 ;left:25px">-->
-    <!--<img src="./image/wallhaven-500971.jpg" alt="" style="width: 590px ;height:590px">-->
-    <!--</div>-->
-    <!--<div class="small" style="top:0 ;left:630px">-->
-    <!--<img src="./image/wallhaven-113384.png" alt="" style="width: 285px ;height:285px">-->
-    <!--</div>-->
-    <!--<div class="small" style="top:305px;left:630px">-->
-    <!--<img src="./image/wallhaven-272887.jpg" alt="" style="width: 285px ;height:285px">-->
-
-    <!--</div>-->
-    <!--</div>-->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <script src="js/init_swiper.js"></script>
 
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+<script src="//at.alicdn.com/t/font_570364_i3lxcq9qo0kvs4i.js"></script>
+<!--模块化-->
+<script src="js/loading_animation.js"></script>
+<script src="js/sticky.js"></script>
+<script src="js/auto_slide_up.js"></script>
+<script src="js/smoothly_navigation.js"></script>
 
-
-<script>
-    //开头动画
-    setTimeout(function () {
-        siteWelcome.classList.remove('active');
-    }, 1000);
-
-    //添加offset类
-    let specitialTags = document.querySelectorAll('[data-x]');
-    for (let i = 0; i < specitialTags.length; i++) {
-        specitialTags[i].classList.add('offset');
-    }
-    //向上滑动动画   需要延迟
-    setTimeout(function () {
-        findClosest();
-    }, 1000);
-
-    //粘贴的导航栏  ，自动高亮导航栏
-    window.onscroll = function () {
-        window.scrollY > 0 ? topNavBar.classList.add('sticky') : topNavBar.classList.remove('sticky');
-        findClosest();
-    }
-
-    let liTages = document.querySelectorAll('nav.menu>ul>li');
-    for (let i = 0; i < liTages.length; i++) {
-        liTages[i].onmouseenter = function (e) {
-            let li = e.currentTarget;
-            // let brother=li.getElementsByTagName('ul')[0];
-            // let brother=a.nextSibling;
-            // while(brother.tagName!=='UL'){
-            //   brother=brother.nextSibling;
-            // }
-            //鼠标一进去就添加active类
-            li.classList.remove('vanish');
-            li.classList.add('active');
-        }
-        liTages[i].onmouseleave = function (e) {
-            let li = e.currentTarget;
-            // let brother=li.getElementsByTagName('ul')[0];
-            // let brother=a.nextSibling;
-            // while(brother.tagName!=='UL'){
-            //   brother=brother.nextSibling;
-            // }
-            //鼠标一进去就删除active类
-            // brother.classList.remove('active');
-            li.classList.add('vanish');
-            li.classList.remove('active');
-
-        }
-    }
-
-
-    if (window.navigator.onLine == true) {
-        //使用TWEEN.js 运行动画
-        console.log(TWEEN);
-
-        function animate(time) {
-            requestAnimationFrame(animate);
-            TWEEN.update(time);
-        }
-
-        requestAnimationFrame(animate);
-        //用TWEEN.js的auto scroll smoothly
-        let aTags = document.querySelectorAll('nav.menu >ul>li>a');
-        // console.log("currentTop   "+window.scrollY);
-        for (let i = 0; i < aTags.length; i++) {
-            aTags[i].onclick = function (x) {
-                // console.log("currentTop点击   "+window.scrollY);
-                x.preventDefault();
-                let a = x.currentTarget;
-                let href = a.getAttribute('href');
-                // console.log(href);
-                let element = document.querySelector(href);
-                // console.log(element);
-                // let tops=element.scrollTop;
-                // console.log("scrollTop"+tops);
-                let top = element.offsetTop;
-                // console.log(top);
-                // window.scrollTo(0,top-80);
-                let currentTop = window.scrollY;
-                let targetTop = top - 80;
-                let i = 0;
-                let distance = targetTop - currentTop;//每次动的距离
-                let t = Math.abs(distance / 100) * 500;
-                if (t > 500) {
-                    t = 500;
-                }
-                var coords = {y: currentTop};
-                var tween = new TWEEN.Tween(coords)
-                    .to({y: targetTop}, t)
-                    .easing(TWEEN.Easing.Quadratic.InOut)
-                    .onUpdate(function () {
-                        console.log(1);
-                        window.scrollTo(0, coords.y);
-                    })
-                    .start(); // Start the tween immediately.
-
-            }
-        }
-    } else {
-        //auto scroll smoothly
-        let aTags = document.querySelectorAll('nav.menu >ul>li>a');
-        console.log("currentTop   " + window.scrollY);
-        for (let i = 0; i < aTags.length; i++) {
-            aTags[i].onclick = function (x) {
-                console.log("currentTop点击   " + window.scrollY);
-                x.preventDefault();
-                let a = x.currentTarget;
-                let href = a.getAttribute('href');
-                // console.log(href);
-                let element = document.querySelector(href);
-                // console.log(element);
-                // let tops=element.scrollTop;
-                // console.log("scrollTop"+tops);
-                let top = element.offsetTop;
-                // console.log(top);
-                // window.scrollTo(0,top-80);
-                let n = 25;//一共动多少次  5
-                let duration = 1000 / n; //每次动多少秒  5000
-                let currentTop = window.scrollY;
-                console.log("window.scrollY   " + currentTop);
-                let targetTop = top - 80;
-                console.log("div.offsetTop-80   " + targetTop);
-                let i = 0;
-                let distance = (targetTop - currentTop) / n;//每次动的距离
-                console.log("每次移动的距离 distance   " + distance);
-                let id = setInterval(() => {
-                    //   if(i===n){
-                    //     // window.clearInterval(id);  注意，这是不行的，没返回值，要多执行一次
-                    //     return;
-                    // }
-                    i++;
-                    console.log("currentTop   " + window.scrollY);
-                    window.scrollTo(0, currentTop + distance * i);
-                    console.log("currentTop滚动之后  " + window.scrollY + distance * i);
-                    if (i === n) {
-                        window.clearInterval(id);//  注意，这是不行的，因为要多执行一次
-                        // return;
-                    }
-                }, duration);
-                // console.log("之后currentTop   "+currentTop);
-                // console.log("之后targetTop   "+targetTop);
-
-            }
-        }
-    }
-
-
-    function findClosest() {
-        //判断元素是否在屏幕中
-        let specitialTags = document.querySelectorAll('[data-x]');
-        //minIndex 就是离窗口顶部最近的元素
-        let minIndex = 0;
-        // console.log('window.scrollY');
-        // console.log(window.scrollY);
-
-        for (let i = 1; i < specitialTags.length; i++) {
-            if (Math.abs(specitialTags[minIndex].offsetTop - window.scrollY) > Math.abs(specitialTags[i].offsetTop - window.scrollY)) {
-                minIndex = i;
-            }
-            // console.log('minIndex');
-            // console.log(minIndex);
-
-        }
-        // 向上滚动动画
-        specitialTags[minIndex].classList.remove('offset');
-
-        //红色边框判断元素是否出现在屏幕中
-        // for(let i=0;i<specitialTags.length;i++){
-        //   specitialTags[minIndex].classList.remove('findClosestx');
-        // }
-        // specitialTags[minIndex].classList.add('findClosestx');
-        let id = specitialTags[minIndex].id;
-        // console.log(id);
-        let a = document.querySelector('a[href="#' + id + '"]');
-        // console.log(a);
-        let li = a.parentNode;
-        let brothersNode = li.parentNode.children;
-        for (let i = 0; i < brothersNode.length; i++) {
-            brothersNode[i].classList.remove('highlight');
-        }
-        a.parentNode.classList.add('highlight');
-
-        // specitialTags[minIndex].classList.add('animate');
-
-
-    }
-</script>
 </body>
 </html>

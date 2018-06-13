@@ -1,2 +1,2 @@
 # Cool-resume
-a cool resume
+炫酷的简历
