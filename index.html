@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="css/loading.css">
     <link rel="stylesheet" href="css/sticky.css">
     <link rel="stylesheet" href="css/animate.css">
-
+    <script src="node_modules/swiper/dist/js/swiper.min.js"></script>
 
     <style type="text/css">
         /*.icon {*/
-            /*width: 1em;*/
-            /*height: 1em;*/
-            /*vertical-align: -0.15em;*/
-            /*fill: currentColor;*/
-            /*overflow: hidden;*/
+        /*width: 1em;*/
+        /*height: 1em;*/
+        /*vertical-align: -0.15em;*/
+        /*fill: currentColor;*/
+        /*overflow: hidden;*/
         /*}*/
 
         .site-welcome {
@@ -185,32 +185,39 @@
 </section>
 <section data-x class="portfolio " id="siteWorks">
     <h2>作品集</h2>
-    <script src="node_modules/swiper/dist/js/swiper.min.js"></script>
+    <!--这就是view, 用户看得见的东西-->
     <!--  变成轮播 -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide work_1"></div>
-            <div class="swiper-slide work_2"></div>
-            <div class="swiper-slide work_3"></div>
+    <!--mySlides  div就是init_swiper的view-->
+    <div id="mySlides">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide work_1"></div>
+                <div class="swiper-slide work_2"></div>
+                <div class="swiper-slide work_3"></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            <!-- 如果需要滚动条 -->
+            <div class="swiper-scrollbar"></div>
         </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-        <!-- 如果需要滚动条 -->
-        <div class="swiper-scrollbar"></div>
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
-    <!-- 如果需要导航按钮 -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
     <script src="js/init_swiper.js"></script>
 
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+
 <script src="//at.alicdn.com/t/font_570364_i3lxcq9qo0kvs4i.js"></script>
 <!--模块化-->
 <script src="js/loading_animation.js"></script>
 <script src="js/sticky.js"></script>
 <script src="js/auto_slide_up.js"></script>
 <script src="js/smoothly_navigation.js"></script>
+<script src="js/navbar_animation.js"></script>
+<script src="js/moudule1.js"></script>
+<script src="js/moudule2.js"></script>
 
 </body>
 </html>
