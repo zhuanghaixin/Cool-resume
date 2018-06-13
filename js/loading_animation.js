@@ -1,4 +1,8 @@
+!function () {
 //开头动画
-setTimeout(function () {
-    siteWelcome.classList.remove('active');
-}, 1000);
+    setTimeout(function () {
+        siteWelcome.classList.remove('active');
+    }, 1000);
+
+}.call();
+
