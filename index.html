@@ -207,9 +207,21 @@
     <script src="js/init_swiper.js"></script>
 
 </section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+<section date-x class="messageBoard" id="siteMessage">
+    <h2>留言板</h2>
+    <form id="postMessageForm" class="postMessageForm">
+        <input type="text" name="content">
+        <input type="submit" value="提交">
+    </form>
+    <ol class="messageList">
 
+    </ol>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
 <script src="//at.alicdn.com/t/font_570364_i3lxcq9qo0kvs4i.js"></script>
+<!-- 存储服务 -->
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.7.2/dist/av-min.js"></script>
+
 <!--模块化-->
 <script src="js/loading_animation.js"></script>
 <script src="js/sticky.js"></script>
@@ -218,6 +230,6 @@
 <script src="js/navbar_animation.js"></script>
 <script src="js/moudule1.js"></script>
 <script src="js/moudule2.js"></script>
-
+<script src="js/message.js"></script>
 </body>
 </html>

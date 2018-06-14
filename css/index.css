@@ -457,3 +457,14 @@ section.portfolio .swiper-button-prev:focus,section.portfolio .swiper-button-nex
   /*transform: rotate(360deg);*/
   /*transition: all .5s;*/
 /*}*/
+
+
+/* 留言板 */
+section.messageBoard{
+  max-width:940px ;
+  margin : 0 auto;
+  margin-top: 60px;
+}
+section.messageBoard h2{
+  text-align: center;
+}
