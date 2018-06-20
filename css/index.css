@@ -284,7 +284,8 @@ section.portfolio{
 }
 
 section.skills >h2,
-section.portfolio >h2{
+section.portfolio >h2,
+section.messageBoard >h2{
   text-align: center;
   color:#3d4451;
   line-height: 1.2;
@@ -461,10 +462,20 @@ section.portfolio .swiper-button-prev:focus,section.portfolio .swiper-button-nex
 
 /* 留言板 */
 section.messageBoard{
-  max-width:940px ;
+  max-width:668px ;
   margin : 0 auto;
   margin-top: 60px;
 }
-section.messageBoard h2{
-  text-align: center;
+section.messageBoard ol{
+  max-width: 668px;
+  margin: 0 auto;
+  border-top:1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 60px;
 }
+section.messageBoard ol>li{
+
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+}
+

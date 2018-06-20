@@ -12,6 +12,7 @@ console.log(postMessageForm);
 postMessageForm.addEventListener('submit', function (e) {
     e.preventDefault();//阻止默认事件
     let content = postMessageForm.querySelector('input[name=content').value;
+    let name = postMessageForm.querySelector('input[name=name').value;
     // 创建TestObject表
     var Message = AV.Object.extend('Message');
 // 在表中创建一行数据
@@ -19,10 +20,17 @@ postMessageForm.addEventListener('submit', function (e) {
 // 数据内容是 wordsL'Hello Word' 保存
 // 如果保存成功则运行 alert(' ');
     message.save({
-        'content': content
+        'content': content,
+        'name':name
     }).then(function (object) {
-        alert('数据提交成功');
-        window.location.reload();
+        // alert('数据提交成功');
+        // window.location.reload();  有刷新留言
+        let li=document.createElement('li');
+        let content=object.attributes.content;
+        let name=object.attributes.content;
+        let messageList=document.querySelector('.messageList');
+        li.innerText=`${name}:${content}`;
+        messageList.appendChild(li);
     },function (error) {
         alert('请改天留言');
     })
@@ -37,7 +45,8 @@ query.find()
     messageArray.forEach((item)=>{
         let li=document.createElement('li');
         let content=item.content;
-        li.innerText=content;
+        let name=item.name;
+        li.innerText=`${name}:${content}`;
         messageList.appendChild(li);
     })
 }).then(function (messages) {

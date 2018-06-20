@@ -58,6 +58,7 @@
 
                     </ul>
                 </li>
+                <li><a href="#siteMessage">留言板</a></li>
                 <li class="menuTrigger">
                     <a href="#siteBlogs">博客</a>
                     <ul class="subMenu">
@@ -209,13 +210,17 @@
 </section>
 <section date-x class="messageBoard" id="siteMessage">
     <h2>留言板</h2>
-    <form id="postMessageForm" class="postMessageForm">
-        <input type="text" name="content">
-        <input type="submit" value="提交">
-    </form>
     <ol class="messageList">
 
     </ol>
+    <form id="postMessageForm" class="postMessageForm">
+        <label for="name">姓名</label>
+        <input type="text" name="name" id="name">
+        <label for="content">内容</label>
+        <input type="text" name="content" id="content">
+        <input type="submit" value="提交">
+    </form>
+
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
 <script src="//at.alicdn.com/t/font_570364_i3lxcq9qo0kvs4i.js"></script>
