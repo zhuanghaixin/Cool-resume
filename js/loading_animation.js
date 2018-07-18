@@ -1,6 +1,6 @@
 !function () {
 //开头动画
-    var view=document.querySelector('#siteWelcome');
+    var view=View('#siteWelcome');
     // view.style.border="1px solid red";
     var controller={
         view:null,

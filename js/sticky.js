@@ -1,8 +1,8 @@
 !function () {
     //粘贴的导航栏  ，自动高亮导航栏
-    var view = document.querySelector('#topNavBar');
+    var view = View('#topNavBar');
     // view.style.border = "1px solid red";
-    console.log(view);
+
     var controller = {
         view: null, // 一开始view是空的
         init: function (view) {
