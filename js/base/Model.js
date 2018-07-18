@@ -13,9 +13,9 @@ window.Model=function (options) {
         },
         save:function (object) {
             // 创建TestObject表
-            var x = AV.Object.extend(resourceName);
+            var X = AV.Object.extend(resourceName);
             // 在表中创建一行数据
-            var x= new Message();
+            var x= new X();
             // 数据内容是 wordsL'Hello Word' 保存
             // 如果保存成功则运行 alert(' ');
             return x.save(object)  //Promise对象
