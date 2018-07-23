@@ -1,3 +1,9 @@
+/**
+var model=Model({
+    resourceName:'表名'
+})
+ **/
+
 window.Model=function (options) {
     let resourceName=options.resourceName;
     return {
