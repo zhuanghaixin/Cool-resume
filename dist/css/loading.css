@@ -1,0 +1,33 @@
+/*loading animation*/
+.loading {
+  width: 200px;
+  height: 200px;
+  /*border: 1px solid red;*/
+  position: relative; }
+
+.loading:after, .loading:before {
+  content: " ";
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  background: #e6686a;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  animation: s 2s linear infinite; }
+
+.loading:before {
+  animation-delay: 1s; }
+
+@keyframes s {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 1; }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0; } }

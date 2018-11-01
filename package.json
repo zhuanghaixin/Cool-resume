@@ -1,0 +1,27 @@
+{
+  "name": "cool-resume",
+  "version": "1.0.0",
+  "description": "炫酷的简历",
+  "main": "index.js",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "swiper": "^4.3.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src/js -d dist/js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhuanghaixin/Cool-resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhuanghaixin/Cool-resume/issues"
+  },
+  "homepage": "https://github.com/zhuanghaixin/Cool-resume#readme"
+}
