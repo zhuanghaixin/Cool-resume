@@ -26,13 +26,14 @@ HTML5+CSS3+jQuery+JavaScript+leancloud
 
 - 对某个表单的提交按钮进行监听的时候，应该监听按钮还是form表单
 >应该监听form表单，因为当用户按回车进行提交的时候，如果监听提交按钮的话，除了按钮的click事件需要监听，还需要监听按钮的keypress事件，下面我们来看看两者的区别
-```
+
+```html
 form>
     <input type="text" name="content">
     <input type="submit" value="提交">
     </form>
 ```
-```
+```javascript
 //监听form
 let form=document.querySelector('form');
 form.addEventListener('submit',function(e){
@@ -41,7 +42,7 @@ form.addEventListener('submit',function(e){
 })
 
 ```
-```
+```javascript
 //监听按钮
 let btn=document.querySelector('input[type=submit');
 btn.addEventListener('click',function () {
