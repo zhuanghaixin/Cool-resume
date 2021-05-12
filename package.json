@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "babel-preset-env": "^1.7.0",
-    "swiper": "^4.3.3"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0"
